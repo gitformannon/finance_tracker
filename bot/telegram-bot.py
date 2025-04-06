@@ -22,11 +22,10 @@ def parse_bank_message(message):
     data = {}
 
     patterns = {
-        'type_label': r"^(💸 Оплата|🎉 Пополнение|💸 Операция|🏧 Снятие наличных)",
         'amount': r"^(➖|➕) ([\d.,]+) UZS",
         'commission': r"^⚠️ Комиссия: ([\d.,]+) UZS",
         'epos': r"^📍 (.+)",
-        'card_number': r"^💳 (.+)",
+        'card_mask': r"^💳 (.+)",
         'date': r"^🕓 (\d{2}:\d{2} \d{2}\.\d{2}\.\d{4})",
         'balance': r"^💰 ([\d.,]+) UZS"
     }
@@ -36,9 +35,7 @@ def parse_bank_message(message):
         for key, pattern in patterns.items():
             match = re.match(pattern, line)
             if match:
-                if key == 'type_label':
-                    data['type_label'] = match.group(1)
-                elif key == 'amount':
+                if key == 'amount':
                     amount = float(match.group(2).replace(',', '').replace('.', '')) / 100
                     data['amount'] = amount
                 elif key == 'commission':
@@ -46,10 +43,10 @@ def parse_bank_message(message):
                     data['commission'] = commission
                 elif key == 'epos':
                     data['epos'] = match.group(1)
-                elif key == 'card_number':
+                elif key == 'card_mask':
                     card_match = re.search(r"\*(\d+)", match.group(1))
                     if card_match:
-                        data['card_number'] = f"*{card_match.group(1)}"
+                        data['card_mask'] = f"*{card_match.group(1)}"
                 elif key == 'date':
                     date_obj = datetime.strptime(match.group(1), "%H:%M %d.%m.%Y")
                     date_obj = date_obj.replace(tzinfo=ZoneInfo("Asia/Tashkent"))
@@ -57,6 +54,11 @@ def parse_bank_message(message):
                 elif key == 'balance':
                     balance = float(match.group(1).replace(',', '').replace('.', '')) / 100
                     data['balance'] = balance
+
+    # Prepare for future lookup logic
+    data['type_id'] = None  # To be populated from type lookup logic
+    data['card_id'] = None  # To be populated from card lookup logic
+
     return data
 
 
@@ -132,3 +134,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    # 2. Implement thedatabase lookup logic
+    # 3. Seed example data into both tables
+
+    # Seed Your Database
+    # Finalize Lookup Logic
+    # Integrate Lookup in Bot
+    # Test End-to-End

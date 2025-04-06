@@ -9,9 +9,13 @@ class Card(Base):
     __tablename__ = "cards"
 
     id = Column(Integer, primary_key=True, index=True)
-    card_number = Column(String, unique=True, nullable=False)
-    account_id = Column(String, nullable=False)
-    description = Column(String, nullable=True)
+    number = Column(String, nullable=False)  # full card number (if needed)
+    pan = Column(String, nullable=True)      # first 4–6 digits
+    mask = Column(String, nullable=False)    # last 4 digits
+    name = Column(String, nullable=True)
+    processing_id = Column(Integer, nullable=True)
+    processing_label = Column(String, nullable=True)
+    balance = Column(Float, nullable=True)
 
     transactions = relationship("Transaction", back_populates="card")
 
@@ -41,3 +45,12 @@ class Transaction(Base):
 
     card = relationship("Card", back_populates="transactions")
     transaction_type = relationship("TransactionType", back_populates="transactions")
+
+
+class Pattern(Base):
+    __tablename__ = "patterns"
+
+    id = Column(Integer, primary_key=True, index=True)
+    processing_id = Column(Integer, nullable=False)
+    processing_name = Column(String, nullable=False)
+    pattern = Column(String, nullable=False)
