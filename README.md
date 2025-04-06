@@ -1,2 +1,2 @@
-# PersProject_fintracker
-Pers Financial Tracker
+# Personal Project - Fintracker
+Initial test project
