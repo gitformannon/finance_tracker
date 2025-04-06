@@ -1,0 +1,6 @@
+"python-telegram-bot[webhooks]"
+python-telegram-bot==20.3
+notion-client
+python-dotenv
+httpx
+aiohttp
