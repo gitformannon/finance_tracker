@@ -4,33 +4,223 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c325a069-2d88-41da-8d07-dd6c03ba2791" name="Changes" comment="Added frontend 1">
-      <change afterPath="$PROJECT_DIR$/backend/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/finance_tracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/finance_tracker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/schemas.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/seed_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/telegram-bot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ios/Flutter/Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ios/Flutter/Release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/lib/auth_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/lib/auth_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+    <list default="true" id="c325a069-2d88-41da-8d07-dd6c03ba2791" name="Changes" comment="Backend Architech">
+      <change afterPath="$PROJECT_DIR$/backend/api/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/auth_routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/cards.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/transactions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/core/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/core/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/core/security.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/database/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/seed_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/seed_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bot/telegram-bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/telegram-bot/telegram-bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/pytest_plugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/pytest_plugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/test_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/web_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/web_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/web_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/web_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/web_urldispatcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/web_urldispatcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/aiohttp/worker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/httpx/_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/httpx/_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/httpx/_transports/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/httpx/_transports/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/httpx/_transports/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/httpx/_transports/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/notion_client/api_endpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/notion_client/api_endpoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_internal/locations/_distutils.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_internal/locations/_distutils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/packaging/licenses/_spdx.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/packaging/licenses/_spdx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/pkg_resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/pkg_resources/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/platformdirs/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/platformdirs/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/platformdirs/android.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/platformdirs/android.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/platformdirs/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/platformdirs/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/platformdirs/windows.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/platformdirs/windows.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/pygments/filters/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/pygments/filters/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/rich/console.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/rich/console.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/urllib3/contrib/_appengine_environ.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/urllib3/contrib/_appengine_environ.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/urllib3/contrib/appengine.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/pip/_vendor/urllib3/contrib/appengine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_botcommand.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_botcommand.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_botcommandscope.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_botcommandscope.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_botdescription.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_botdescription.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_botname.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_botname.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_callbackquery.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_callbackquery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chat.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatadministratorrights.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatadministratorrights.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatinvitelink.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatinvitelink.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatjoinrequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatjoinrequest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatlocation.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatlocation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatmember.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatmember.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatmemberupdated.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatmemberupdated.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatpermissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_chatpermissions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_choseninlineresult.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_choseninlineresult.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_dice.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_dice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/_basemedium.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/_basemedium.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/_basethumbedmedium.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/_basethumbedmedium.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/animation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/audio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/chatphoto.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/chatphoto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/document.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/document.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/file.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/inputfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/inputfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/inputmedia.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/inputmedia.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/inputsticker.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/inputsticker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/location.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/location.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/photosize.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/photosize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/sticker.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/sticker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/venue.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/venue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/video.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/video.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/videonote.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/videonote.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/voice.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_files/voice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_forcereply.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_forcereply.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_forumtopic.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_forumtopic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_games/callbackgame.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_games/callbackgame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_games/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_games/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_games/gamehighscore.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_games/gamehighscore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinekeyboardbutton.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinekeyboardbutton.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinekeyboardmarkup.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinekeyboardmarkup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequery.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresult.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresult.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultarticle.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultarticle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultaudio.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultaudio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedaudio.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedaudio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcacheddocument.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcacheddocument.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedgif.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedgif.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedmpeg4gif.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedmpeg4gif.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedphoto.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedphoto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedsticker.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedsticker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedvideo.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedvideo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedvoice.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcachedvoice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcontact.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultcontact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultdocument.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultdocument.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultgame.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultgame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultgif.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultgif.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultlocation.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultlocation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultmpeg4gif.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultmpeg4gif.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultphoto.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultphoto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultsbutton.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultsbutton.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultvenue.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultvenue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultvideo.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultvideo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultvoice.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inlinequeryresultvoice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inputcontactmessagecontent.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inputcontactmessagecontent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inputinvoicemessagecontent.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inputinvoicemessagecontent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inputlocationmessagecontent.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inputlocationmessagecontent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inputmessagecontent.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inputmessagecontent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inputtextmessagecontent.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inputtextmessagecontent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inputvenuemessagecontent.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_inline/inputvenuemessagecontent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_keyboardbutton.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_keyboardbutton.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_keyboardbuttonpolltype.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_keyboardbuttonpolltype.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_keyboardbuttonrequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_keyboardbuttonrequest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_loginurl.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_loginurl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_menubutton.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_menubutton.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_message.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_messageautodeletetimerchanged.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_messageautodeletetimerchanged.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_messageentity.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_messageentity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_messageid.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_messageid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_passport/credentials.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_passport/credentials.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_passport/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_passport/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_passport/encryptedpassportelement.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_passport/encryptedpassportelement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_passport/passportdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_passport/passportdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_passport/passportelementerrors.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_passport/passportelementerrors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_passport/passportfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_passport/passportfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/invoice.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/invoice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/labeledprice.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/labeledprice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/orderinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/orderinfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/precheckoutquery.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/precheckoutquery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/shippingaddress.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/shippingaddress.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/shippingoption.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/shippingoption.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/shippingquery.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/shippingquery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/successfulpayment.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_payment/successfulpayment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_poll.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_poll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_proximityalerttriggered.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_proximityalerttriggered.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_replykeyboardmarkup.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_replykeyboardmarkup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_replykeyboardremove.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_replykeyboardremove.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_sentwebappmessage.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_sentwebappmessage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_shared.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_shared.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_switchinlinequerychosenchat.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_switchinlinequerychosenchat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_telegramobject.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_telegramobject.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_update.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_update.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_userprofilephotos.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_userprofilephotos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/argumentparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/argumentparsing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/datetime.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/datetime.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/defaultvalue.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/defaultvalue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/enum.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/enum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/files.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/logging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/markup.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/markup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/types.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/warnings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/warnings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/warnings_transition.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_utils/warnings_transition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_version.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_videochat.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_videochat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_webappdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_webappdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_webappinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_webappinfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_webhookinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_webhookinfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_writeaccessallowed.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/_writeaccessallowed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/error.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/error.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_aioratelimiter.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_aioratelimiter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_applicationbuilder.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_applicationbuilder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_basepersistence.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_basepersistence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_baseratelimiter.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_baseratelimiter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_callbackcontext.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_callbackcontext.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_callbackdatacache.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_callbackdatacache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_callbackqueryhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_callbackqueryhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_chatjoinrequesthandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_chatjoinrequesthandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_chatmemberhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_chatmemberhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_choseninlineresulthandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_choseninlineresulthandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_commandhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_commandhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_contexttypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_contexttypes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_conversationhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_conversationhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_defaults.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_defaults.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_dictpersistence.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_dictpersistence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_inlinequeryhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_inlinequeryhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_jobqueue.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_jobqueue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_messagehandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_messagehandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_picklepersistence.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_picklepersistence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_pollanswerhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_pollanswerhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_pollhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_pollhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_precheckoutqueryhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_precheckoutqueryhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_prefixhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_prefixhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_shippingqueryhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_shippingqueryhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_stringcommandhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_stringcommandhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_stringregexhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_stringregexhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_typehandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_typehandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_updater.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_updater.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_utils/stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_utils/stack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_utils/trackingdict.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_utils/trackingdict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_utils/types.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_utils/types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_utils/webhookhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/_utils/webhookhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/ext/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/request/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/request/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/request/_httpxrequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/request/_httpxrequest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/request/_requestdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/request/_requestdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/request/_requestparameter.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/request/_requestparameter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/warnings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/telegram/warnings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/http1connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/http1connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/httputil.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/httputil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/locale.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/locale.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/options.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/routing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/test/web_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/test/web_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/venv/lib/python3.12/site-packages/tornado/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/web/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +233,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Dart File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -86,37 +276,39 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Python.database.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.python-telegram-bot-test.executor": "Run",
-    "Python.telegram-bot.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/mannonpersonal/Development/Projects/finance_tracker",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.database.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.python-telegram-bot-test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.telegram-bot.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mannonpersonal/Development/Projects/finance_tracker&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend" />
@@ -150,7 +342,9 @@
       <workItem from="1743945178780" duration="3518000" />
       <workItem from="1743948895329" duration="2785000" />
       <workItem from="1743951687871" duration="2376000" />
-      <workItem from="1743960056409" duration="1366000" />
+      <workItem from="1743960056409" duration="2793000" />
+      <workItem from="1744217628903" duration="1243000" />
+      <workItem from="1744469365549" duration="4810000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 1">
       <option name="closed" value="true" />
@@ -256,7 +450,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743948332426</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Backend Architech">
+      <option name="closed" value="true" />
+      <created>1743961478176</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1743961478176</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Backend Architech">
+      <option name="closed" value="true" />
+      <created>1743961639661</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1743961639661</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +492,8 @@
     <MESSAGE value="Webhook and requirements" />
     <MESSAGE value="Added frontend" />
     <MESSAGE value="Added frontend 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added frontend 1" />
+    <MESSAGE value="Backend Architech" />
+    <option name="LAST_COMMIT_MESSAGE" value="Backend Architech" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/finance_tracker$telegram_bot.coverage" NAME="telegram-bot Coverage Results" MODIFIED="1743691665350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bot" />

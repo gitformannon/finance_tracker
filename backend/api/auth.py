@@ -1,0 +1,37 @@
+from fastapi import APIRouter, Depends, HTTPException, status
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.future import select
+
+from core.auth import hash_password, verify_password, create_access_token
+from database.session import get_db
+from schemas import UserCreate, Token
+from models import User
+
+router = APIRouter()
+
+@router.post("/auth/register", response_model=Token)
+async def register(user: UserCreate, db: AsyncSession = Depends(get_db)):
+    result = await db.execute(select(User).where(User.email == user.email))
+    if result.scalar_one_or_none():
+        raise HTTPException(status_code=400, detail="Email already registered")
+
+    new_user = User(email=user.email, hashed_password=hash_password(user.password))
+    db.add(new_user)
+    await db.commit()
+    await db.refresh(new_user)
+
+    token = create_access_token({"sub": str(new_user.id)})
+    return {"access_token": token, "token_type": "bearer"}
+
+@router.post("/auth/login", response_model=Token)
+async def login(user: UserCreate, db: AsyncSession = Depends(get_db)):
+    result = await db.execute(select(User).where(User.email == user.email))
+    user_db = result.scalar_one_or_none()
+    if not user_db or not verify_password(user.password, user_db.hashed_password):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid credentials"
+        )
+
+    token = create_access_token({"sub": str(user_db.id)})
+    return {"access_token": token, "token_type": "bearer"}

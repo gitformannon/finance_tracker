@@ -1,22 +1,19 @@
 import os
 import re
 import logging
+import requests
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from telegram import Update
-from telegram.ext import (
-    ApplicationBuilder, MessageHandler, filters,
-    ContextTypes
-)
+from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
 from dotenv import load_dotenv
-import requests
 
 
 # -------------------------------------------
 # Parse the bank message
 # -------------------------------------------
 
-def parse_bank_message(message):
+def parse_bank_message(message: str) -> dict:
     message = message.strip()
     lines = message.split('\n')
     data = {}
@@ -56,8 +53,8 @@ def parse_bank_message(message):
                     data['balance'] = balance
 
     # Prepare for future lookup logic
-    data['type_id'] = None  # To be populated from type lookup logic
-    data['card_id'] = None  # To be populated from card lookup logic
+    data['type_id'] = None
+    data['card_id'] = None
 
     return data
 
@@ -66,7 +63,7 @@ def parse_bank_message(message):
 # Send transaction to backend
 # -------------------------------------------
 
-def send_transaction_to_backend(data):
+def send_transaction_to_backend(data: dict):
     backend_url = os.getenv("BACKEND_URL", "http://127.0.0.1:8000/transactions/")
     response = requests.post(backend_url, json=data)
     if response.status_code == 200:
@@ -104,7 +101,7 @@ async def error_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # -------------------------------------------
-# Main bot setup
+# Main telegram-bot setup
 # -------------------------------------------
 
 def main():
@@ -129,16 +126,8 @@ def main():
 
 
 # -------------------------------------------
-# Start the bot
+# Start the telegram-bot
 # -------------------------------------------
 
 if __name__ == "__main__":
     main()
-
-    # 2. Implement thedatabase lookup logic
-    # 3. Seed example data into both tables
-
-    # Seed Your Database
-    # Finalize Lookup Logic
-    # Integrate Lookup in Bot
-    # Test End-to-End
