@@ -1,0 +1,17 @@
+from pydantic import BaseModel
+from typing import Optional
+
+class CardCreate(BaseModel):
+    number: str
+    pan: Optional[str]
+    mask: str
+    name: Optional[str]
+    processing_id: Optional[int]
+    processing_label: Optional[str]
+    balance: Optional[float]
+
+class CardOut(CardCreate):
+    id: int
+
+    class Config:
+        orm_mode = True
