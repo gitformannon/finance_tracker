@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c325a069-2d88-41da-8d07-dd6c03ba2791" name="Changes" comment="Backend Models and Schemas">
-      <change afterPath="$PROJECT_DIR$/backend/services/card_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/services/pattern_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/services/transaction_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/services/transaction_type_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/services/user_service.py" afterDir="false" />
+    <list default="true" id="c325a069-2d88-41da-8d07-dd6c03ba2791" name="Changes" comment="Backend requirements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/seed_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/seed_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +134,7 @@
       <workItem from="1743951687871" duration="2376000" />
       <workItem from="1743960056409" duration="2793000" />
       <workItem from="1744217628903" duration="1243000" />
-      <workItem from="1744469365549" duration="7588000" />
+      <workItem from="1744469365549" duration="8736000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 1">
       <option name="closed" value="true" />
@@ -275,7 +272,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744526597893</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Backend Services">
+      <option name="closed" value="true" />
+      <created>1744527468326</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1744527468326</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Backend requirements">
+      <option name="closed" value="true" />
+      <created>1744527637624</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1744527637624</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +317,9 @@
     <MESSAGE value="Backend Architech" />
     <MESSAGE value="Backend Architechute 1" />
     <MESSAGE value="Backend Models and Schemas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Backend Models and Schemas" />
+    <MESSAGE value="Backend Services" />
+    <MESSAGE value="Backend requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Backend requirements" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/finance_tracker$telegram_bot.coverage" NAME="telegram-bot Coverage Results" MODIFIED="1743691665350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bot" />
