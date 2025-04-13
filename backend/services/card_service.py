@@ -13,7 +13,12 @@ async def get_all_cards_for_user(user_id: int, db: AsyncSession) -> list[Card]:
     return result.scalars().all()
 
 async def create_card(card_data: CardCreate, user: User, db: AsyncSession) -> Card:
-    new_card = Card(**card_data.dict(), user_id=user.id)
+    pan = card_data.number[:6]
+    mask = card_data.number[-4:]
+    card_dict = card_data.dict()
+    card_dict["pan"] = pan
+    card_dict["mask"] = mask
+    new_card = Card(**card_dict, user_id=user.id)
     db.add(new_card)
     await db.commit()
     await db.refresh(new_card)

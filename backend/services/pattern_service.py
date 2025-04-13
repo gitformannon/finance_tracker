@@ -1,23 +1,23 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
-from models import Pattern
-from schemas.pattern import PatternCreate
+from models import MessageTemplate
+from schemas.message_template import MessageTemplateCreate
 
-async def get_all_patterns(db: AsyncSession) -> list[Pattern]:
-    result = await db.execute(select(Pattern))
+async def get_all_templates(db: AsyncSession) -> list[MessageTemplate]:
+    result = await db.execute(select(MessageTemplate))
     return result.scalars().all()
 
-async def create_pattern(pattern_data: PatternCreate, db: AsyncSession) -> Pattern:
-    new_pattern = Pattern(**pattern_data.dict())
-    db.add(new_pattern)
+async def create_template(template_data: MessageTemplateCreate, db: AsyncSession) -> MessageTemplate:
+    new_template = MessageTemplate(**template_data.dict())
+    db.add(new_template)
     await db.commit()
-    await db.refresh(new_pattern)
-    return new_pattern
+    await db.refresh(new_template)
+    return new_template
 
-async def find_matching_pattern(message: str, db: AsyncSession) -> Pattern | None:
-    result = await db.execute(select(Pattern))
-    patterns = result.scalars().all()
-    for pattern in patterns:
-        if pattern.pattern in message:
-            return pattern
+async def find_matching_template(message: str, db: AsyncSession) -> MessageTemplate | None:
+    result = await db.execute(select(MessageTemplate))
+    templates = result.scalars().all()
+    for template in templates:
+        if template.message_template in message:
+            return template
     return None

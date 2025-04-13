@@ -3,7 +3,7 @@ from database.session import engine, AsyncSessionLocal
 from models import Base
 from models.transaction_type import TransactionType
 from models.card import Card
-from models.pattern import Pattern
+from models.message_template import MessageTemplate
 from sqlalchemy import select
 
 async def seed():
