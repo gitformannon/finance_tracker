@@ -10,13 +10,21 @@ async def seed():
         await conn.run_sync(Base.metadata.create_all)
 
     async with AsyncSessionLocal() as db:
-        # Seed transaction types
-        tx_types = [
-            TransactionType(message_label="💸 Оплата", internal_type="expense", icon="💸"),
-            TransactionType(message_label="🎉 Пополнение", internal_type="income", icon="🎉"),
-            TransactionType(message_label="🏧 Снятие наличных", internal_type="cashout", icon="🏧"),
+        existing_labels = {
+            row.message_label for row in (await db.execute(
+                TransactionType.__table__.select()
+            )).scalars().all()
+        }
+
+        tx_types_to_add = [
+            {"message_label": "💸 Оплата", "internal_type": "expense", "icon": "💸", "processing_id": 1},
+            {"message_label": "🎉 Пополнение", "internal_type": "income", "icon": "🎉", "processing_id": 1},
+            {"message_label": "🏧 Снятие наличных", "internal_type": "cashout", "icon": "🏧", "processing_id": 1},
         ]
-        db.add_all(tx_types)
+
+        for tx in tx_types_to_add:
+            if tx["message_label"] not in existing_labels:
+                db.add(TransactionType(**tx))
 
         # Seed card
         card = Card(
