@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     WEBHOOK_URL: str
     PORT: int
     SEED_ENABLED: bool
+    BACKEND_URL:str
 
     class Config:
         env_file = ".env"

@@ -41,17 +41,18 @@ async def on_startup():
     await application.initialize()
     logging.info("Telegram Application initialized.")
 
-@app.get("/webhook")
-def webhook_status():
-    return {"message": "Webhook endpoint is alive, but POST is required."}
-
 @app.post("/webhook")
 async def telegram_webhook(request: Request):
     try:
         data = await request.json()
+        print("📩 Incoming update:", data)  # <-- add this for debugging
+
         update = Update.de_json(data, application.bot)
         await application.process_update(update)
+
         return {"status": "ok"}
     except Exception as e:
-        logging.exception("Error handling Telegram webhook")
+        import traceback
+        print("❌ Error handling webhook:")
+        traceback.print_exc()  # <-- add this too
         return JSONResponse(status_code=500, content={"error": str(e)})
