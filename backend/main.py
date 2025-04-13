@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
 from api.auth import router as auth_router
 from api.transactions import router as transactions_router
 from database.session import engine
@@ -18,8 +17,8 @@ app.add_middleware(
 )
 
 # Routers
-app.include_router(auth_router, prefix="/auth", tags=["Auth"])
-app.include_router(transactions_router, prefix="/transactions", tags=["Transactions"])
+app.include_router(auth_router, prefix="/backend/v1/fintracker/auth", tags=["Auth"])
+app.include_router(transactions_router, prefix="/backend/v1/fintracker/transactions", tags=["Transactions"])
 
 # DB initialization (optional for dev)
 @app.on_event("startup")

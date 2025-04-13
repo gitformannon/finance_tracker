@@ -6,7 +6,7 @@ class TransactionType(Base):
     __tablename__ = "transaction_types"
 
     id = Column(Integer, primary_key=True, index=True)
-    message_label = Column(String, unique=True, nullable=False)  # e.g. 💸 Оплата
+    message_label = Column(String, nullable=False, unique=True)  # e.g. 💸 Оплата
     internal_type = Column(String, nullable=True)  # e.g. expense, income
     icon = Column(String, nullable=True)  # optional emoji or icon
 
