@@ -9,7 +9,7 @@ class Transaction(Base):
     amount = Column(Float, nullable=False)
     epos = Column(String, nullable=True)
     balance = Column(Float, nullable=True)
-    date = Column(DateTime, nullable=False)
+    date = Column(DateTime(timezone=True), nullable=False)
 
     card_id = Column(Integer, ForeignKey("cards.id"))
     transaction_type_id = Column(Integer, ForeignKey("transaction_types.id"))

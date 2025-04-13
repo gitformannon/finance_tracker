@@ -5,7 +5,7 @@ from api.cards import router as card_router
 from api.transactions import router as transactions_router
 from database.session import engine
 from models import Base
-from seed_data import seed_transaction_types
+from scripts.seed_data import seed
 
 app = FastAPI(title="Finance Tracker API")
 
@@ -28,3 +28,5 @@ app.include_router(transactions_router, prefix="/backend/v1/fintracker/transacti
 async def on_startup():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+
+    await seed()
