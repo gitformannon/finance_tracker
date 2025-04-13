@@ -4,17 +4,15 @@ from models import Base
 from models.transaction_type import TransactionType
 from models.card import Card
 from models.pattern import Pattern
+from sqlalchemy import select
 
 async def seed():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
 
     async with AsyncSessionLocal() as db:
-        existing_labels = {
-            row.message_label for row in (await db.execute(
-                TransactionType.__table__.select()
-            )).scalars().all()
-        }
+        result = await db.execute(select(TransactionType))
+        existing_labels = {tx_type.message_label for tx_type in result.scalars().all()}
 
         tx_types_to_add = [
             {"message_label": "💸 Оплата", "internal_type": "expense", "icon": "💸", "processing_id": 1},
