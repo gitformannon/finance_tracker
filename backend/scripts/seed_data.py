@@ -24,27 +24,6 @@ async def seed():
             if tx["message_label"] not in existing_labels:
                 db.add(TransactionType(**tx))
 
-        # Seed card
-        card = Card(
-            number="8600123456789012",
-            pan="860012",
-            mask="9012",
-            name="Uzcard",
-            processing_id=1,
-            processing_label="Humo",
-            balance=500000,
-            user_id=1  # assumes a user with id=1 exists
-        )
-        db.add(card)
-
-        # Seed pattern
-        pattern = Pattern(
-            processing_id=1,
-            processing_name="Humo",
-            pattern="💸 Оплата"
-        )
-        db.add(pattern)
-
         await db.commit()
 
 if __name__ == "__main__":

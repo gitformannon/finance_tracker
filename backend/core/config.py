@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     TELEGRAM_BOT_TOKEN: str
     WEBHOOK_URL: str
     PORT: int
-    BACKEND_URL: str
+    SEED_ENABLED: bool
 
     class Config:
         env_file = ".env"
